@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça nossos projetos sociais, seja voluntário ou faça uma doação">
+    <meta name="keywords" content="projetos sociais, voluntariado, doações, educação, inclusão">
+    <title>Projetos Sociais - Esperança Solidária</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <nav>
+                <h1><a href="index.html">Esperança Solidária</a></h1>
+                
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="projetos.html" class="active">Projetos</a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="menu-overlay"></div>
+
+    <!-- Conteúdo Principal -->
+    <main id="main-content">
+        <!-- Introdução aos Projetos -->
+        <section id="intro-projetos">
+            <div class="container">
+                <h2>Nossos Projetos Sociais</h2>
+                <p>Desenvolvemos projetos que promovem educação, cultura, esporte e inclusão social. Cada iniciativa é cuidadosamente planejada para gerar impacto positivo e duradouro na vida das pessoas atendidas.</p>
+                <img src="imagens/projetos-banner.jpg" alt="Crianças participando de atividades dos projetos sociais" width="1200" height="400">
+            </div>
+        </section>
+
+        <!-- Lista de Projetos -->
+        <section id="lista-projetos">
+            <div class="container">
+                <h2>Conheça Nossas Iniciativas</h2>
+
+                <!-- Grid de Cards dos Projetos -->
+                <div class="grid grid-cols-1 grid-cols-md-2 gap-6">
+                    
+                    <!-- Card Projeto 1: Educação -->
+                    <article class="projeto card">
+                        <div class="card-img-wrapper">
+                            <img src="imagens/projeto-educacao.jpg" alt="Crianças em sala de aula do projeto Educar para Transformar" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3>Educar para Transformar</h3>
+                            <p>O projeto oferece reforço escolar, aulas de informática e oficinas de leitura para crianças de 6 a 14 anos.</p>
+                            <span class="badge badge-primary">Educação</span>
+                            <span class="badge badge-success">Ativo</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#projeto-educacao" class="btn btn-primary btn-block">Saiba Mais</a>
+                        </div>
+                    </article>
+
+                    <!-- Card Projeto 2: Esporte -->
+                    <article class="projeto card">
+                        <div class="card-img-wrapper">
+                            <img src="imagens/projeto-esporte.jpg" alt="Jovens praticando atividades esportivas" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3>Esporte e Cidadania</h3>
+                            <p>Utiliza o esporte como ferramenta de inclusão social, oferecendo aulas de futebol, vôlei, basquete e judô.</p>
+                            <span class="badge badge-secondary">Esporte</span>
+                            <span class="badge badge-success">Ativo</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#projeto-esporte" class="btn btn-primary btn-block">Saiba Mais</a>
+                        </div>
+                    </article>
+
+                    <!-- Card Projeto 3: Cultura -->
+                    <article class="projeto card">
+                        <div class="card-img-wrapper">
+                            <img src="imagens/projeto-cultura.jpg" alt="Apresentação cultural com crianças e adolescentes" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3>Arte e Cultura na Comunidade</h3>
+                            <p>Desenvolve talentos artísticos através de oficinas de teatro, música, dança e artes visuais.</p>
+                            <span class="badge badge-warning">Cultura</span>
+                            <span class="badge badge-success">Ativo</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#projeto-cultura" class="btn btn-primary btn-block">Saiba Mais</a>
+                        </div>
+                    </article>
+
+                    <!-- Card Projeto 4: Família -->
+                    <article class="projeto card">
+                        <div class="card-img-wrapper">
+                            <img src="imagens/projeto-familia.jpg" alt="Reunião com famílias atendidas pelo projeto" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3>Família Solidária</h3>
+                            <p>Oferece apoio integral às famílias incluindo orientação psicológica, cursos profissionalizantes e cestas básicas.</p>
+                            <span class="badge badge-info">Assistência</span>
+                            <span class="badge badge-success">Ativo</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#projeto-familia" class="btn btn-primary btn-block">Saiba Mais</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="divider"></div>
+
+                <!-- Detalhes dos Projetos -->
+                <article id="projeto-educacao" class="projeto">
+                    <h3>Educar para Transformar</h3>
+                    <img src="imagens/projeto-educacao.jpg" alt="Crianças em sala de aula" width="600" height="400">
+                    
+                    <h4>Sobre o Projeto</h4>
+                    <p>O projeto <strong>Educar para Transformar</strong> oferece reforço escolar, aulas de informática e oficinas de leitura para crianças de 6 a 14 anos. Com uma equipe de 25 educadores voluntários, atendemos 500 crianças semanalmente.</p>
+                    
+                    <h4>Objetivos</h4>
+                    <ul>
+                        <li>Melhorar o desempenho escolar das crianças atendidas</li>
+                        <li>Desenvolver habilidades de leitura e escrita</li>
+                        <li>Promover inclusão digital</li>
+                        <li>Estimular o hábito de leitura</li>
+                    </ul>
+
+                    <h4>Resultados Alcançados</h4>
+                    <ul>
+                        <li>85% das crianças melhoraram suas notas</li>
+                        <li>200 livros distribuídos mensalmente</li>
+                        <li>100% dos alunos alfabetizados digitalmente</li>
+                    </ul>
+
+                    <h4>Vídeo do Projeto</h4>
+                    <video controls width="640" height="360" poster="imagens/poster-educacao.jpg">
+                        <source src="videos/projeto-educacao.mp4" type="video/mp4">
+                        <source src="videos/projeto-educacao.webm" type="video/webm">
+                        Seu navegador não suporta a reprodução de vídeos.
+                    </video>
+                </article>
+
+                <article id="projeto-esporte" class="projeto">
+                    <h3>Esporte e Cidadania</h3>
+                    <img src="imagens/projeto-esporte.jpg" alt="Jovens praticando atividades esportivas" width="600" height="400">
+                    
+                    <h4>Sobre o Projeto</h4>
+                    <p>O <strong>Esporte e Cidadania</strong> utiliza o esporte como ferramenta de inclusão social, oferecendo aulas de futebol, vôlei, basquete e judô para jovens de 10 a 18 anos.</p>
+                    
+                    <h4>Atividades Oferecidas</h4>
+                    <ol>
+                        <li>Futebol de campo e futsal</li>
+                        <li>Vôlei e vôlei de praia</li>
+                        <li>Basquete</li>
+                        <li>Judô e capoeira</li>
+                        <li>Atletismo</li>
+                    </ol>
+
+                    <h4>Impacto Social</h4>
+                    <p>Mais de <em>300 jovens</em> participam regularmente das atividades, desenvolvendo não apenas habilidades esportivas, mas também valores como disciplina, trabalho em equipe e respeito.</p>
+
+                    <h4>Galeria de Fotos</h4>
+                    <div class="grid grid-cols-1 grid-cols-md-3 gap-4">
+                        <img src="imagens/esporte-1.jpg" alt="Turma de futebol durante treino" width="400" height="300">
+                        <img src="imagens/esporte-2.jpg" alt="Campeonato interno de vôlei" width="400" height="300">
+                        <img src="imagens/esporte-3.jpg" alt="Aula de judô com crianças" width="400" height="300">
+                    </div>
+                </article>
+
+                <article id="projeto-cultura" class="projeto">
+                    <h3>Arte e Cultura na Comunidade</h3>
+                    <img src="imagens/projeto-cultura.jpg" alt="Apresentação cultural" width="600" height="400">
+                    
+                    <h4>Sobre o Projeto</h4>
+                    <p>Desenvolvemos talentos artísticos através de oficinas de teatro, música, dança e artes visuais, promovendo a expressão cultural e o desenvolvimento criativo.</p>
+                    
+                    <h4>Oficinas Disponíveis</h4>
+                    <ul>
+                        <li><strong>Teatro:</strong> Técnicas de interpretação e produção de espetáculos</li>
+                        <li><strong>Música:</strong> Aulas de violão, teclado, percussão e canto</li>
+                        <li><strong>Dança:</strong> Ballet, jazz, hip hop e danças populares</li>
+                        <li><strong>Artes Visuais:</strong> Pintura, desenho e artesanato</li>
+                    </ul>
+
+                    <h4>Áudio - Apresentação Musical</h4>
+                    <audio controls>
+                        <source src="audios/apresentacao-musical.mp3" type="audio/mpeg">
+                        <source src="audios/apresentacao-musical.ogg" type="audio/ogg">
+                        Seu navegador não suporta a reprodução de áudio.
+                    </audio>
+                    <p><small>Apresentação do coral infantil - Concerto de Natal 2024</small></p>
+                </article>
+
+                <article id="projeto-familia" class="projeto">
+                    <h3>Família Solidária</h3>
+                    <img src="imagens/projeto-familia.jpg" alt="Reunião com famílias" width="600" height="400">
+                    
+                    <h4>Sobre o Projeto</h4>
+                    <p>O projeto <strong>Família Solidária</strong> oferece apoio integral às famílias em situação de vulnerabilidade, incluindo orientação psicológica, cursos profissionalizantes e distribuição de cestas básicas.</p>
+                    
+                    <h4>Serviços Oferecidos</h4>
+                    <dl>
+                        <dt>Orientação Psicológica</dt>
+                        <dd>Atendimento individual e em grupo com psicólogos voluntários</dd>
+                        
+                        <dt>Cursos Profissionalizantes</dt>
+                        <dd>Capacitação em costura, culinária, informática e empreendedorismo</dd>
+                        
+                        <dt>Assistência Básica</dt>
+                        <dd>Distribuição mensal de cestas básicas e kits de higiene</dd>
+                        
+                        <dt>Orientação Jurídica</dt>
+                        <dd>Assessoria jurídica gratuita em parceria com universidades</dd>
+                    </dl>
+
+                    <h4>Mapa de Abrangência</h4>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0!2d-46.6333!3d-23.5505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzAxLjgiUyA0NsKwMzcnNTkuOSJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        title="Mapa de localização dos centros de atendimento">
+                    </iframe>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção de Voluntariado -->
+        <section id="voluntariado">
+            <div class="container">
+                <h2>Seja um Voluntário</h2>
+                <p>O voluntariado é o coração da nossa organização. Contamos com pessoas dispostas a doar seu tempo, conhecimento e amor para transformar vidas.</p>
+                
+                <div class="grid grid-cols-1 grid-cols-md-2 gap-6">
+                    <article>
+                        <h3>Por que Ser Voluntário?</h3>
+                        <ul>
+                            <li>Fazer a diferença na vida de crianças e famílias</li>
+                            <li>Desenvolver novas habilidades e competências</li>
+                            <li>Ampliar sua rede de relacionamentos</li>
+                            <li>Contribuir para uma sociedade mais justa</li>
+                            <li>Receber certificado de horas voluntárias</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>Como se Tornar Voluntário</h3>
+                        <ol>
+                            <li>Preencha o formulário de cadastro na página <a href="cadastro.html">Cadastre-se</a></li>
+                            <li>Participe de uma reunião de integração (online ou presencial)</li>
+                            <li>Escolha a área de atuação que mais combina com você</li>
+                            <li>Receba o treinamento específico da área escolhida</li>
+                            <li>Comece a transformar vidas!</li>
+                        </ol>
+                    </article>
+                </div>
+
+                <div class="table-responsive mt-6">
+                    <table>
+                        <caption>Oportunidades de Voluntariado Disponíveis</caption>
+                        <thead>
+                            <tr>
+                                <th>Área</th>
+                                <th>Atividades</th>
+                                <th>Disponibilidade</th>
+                                <th>Vagas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Educação</td>
+                                <td>Reforço escolar e alfabetização</td>
+                                <td>2x por semana (tarde)</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Esportes</td>
+                                <td>Instrutor de atividades esportivas</td>
+                                <td>Finais de semana</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Cultura</td>
+                                <td>Oficinas de arte e música</td>
+                                <td>1x por semana</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>Administrativo</td>
+                                <td>Apoio em gestão e comunicação</td>
+                                <td>Flexível (remoto)</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Saúde</td>
+                                <td>Atendimento psicológico</td>
+                                <td>Agendamento prévio</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <aside class="mt-6">
+                    <h4>Depoimento de Voluntária</h4>
+                    <blockquote>
+                        <p>"Ser voluntária da Esperança Solidária mudou minha perspectiva de vida. A cada aula que dou, aprendo mais do que ensino. Ver o progresso das crianças é minha maior recompensa."</p>
+                        <footer>— Ana Paula Costa, voluntária há 2 anos</footer>
+                    </blockquote>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Seção de Doações -->
+        <section id="doacoes">
+            <div class="container">
+                <h2>Como Doar</h2>
+                <p>Sua doação transforma vidas! Todo recurso arrecadado é aplicado diretamente em nossos projetos, com total transparência e prestação de contas.</p>
+
+                <div class="grid grid-cols-1 grid-cols-lg-2 gap-6">
+                    <article>
+                        <h3>Formas de Contribuir</h3>
+                        
+                        <h4>1. Doação Financeira</h4>
+                        <p>Você pode fazer doações únicas ou mensais através de:</p>
+                        <ul>
+                            <li><strong>PIX:</strong> doacoes@esperancasolidaria.org.br</li>
+                            <li><strong>Transferência Bancária:</strong>
+                                <ul>
+                                    <li>Banco do Brasil - Agência: 1234-5</li>
+                                    <li>Conta Corrente: 98765-4</li>
+                                    <li>CNPJ: 12.345.678/0001-90</li>
+                                </ul>
+                            </li>
+                            <li><strong>Cartão de Crédito:</strong> através do nosso site (em breve)</li>
+                        </ul>
+
+                        <h4>2. Doação de Materiais</h4>
+                        <p>Aceitamos doações de:</p>
+                        <ul>
+                            <li>Material escolar (cadernos, lápis, mochilas)</li>
+                            <li>Livros infantis e didáticos</li>
+                            <li>Equipamentos esportivos</li>
+                            <li>Alimentos não perecíveis</li>
+                            <li>Roupas e calçados em bom estado</li>
+                            <li>Brinquedos educativos</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>Impacto das Doações</h3>
+                        <table>
+                            <caption>O que sua doação pode fazer</caption>
+                            <thead>
+                                <tr>
+                                    <th>Valor</th>
+                                    <th>Impacto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>R$ 30,00</td>
+                                    <td>Kit de material escolar completo para 1 criança</td>
+                                </tr>
+                                <tr>
+                                    <td>R$ 50,00</td>
+                                    <td>Cesta básica para 1 família por 1 mês</td>
+                                </tr>
+                                <tr>
+                                    <td>R$ 100,00</td>
+                                    <td>Uniforme esportivo completo para 2 crianças</td>
+                                </tr>
+                                <tr>
+                                    <td>R$ 200,00</td>
+                                    <td>1 mês de aulas de reforço escolar para 5 crianças</td>
+                                </tr>
+                                <tr>
+                                    <td>R$ 500,00</td>
+                                    <td>Compra de instrumentos musicais para oficina</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="mt-4">Incentivos Fiscais</h4>
+                        <p>Pessoas físicas e jurídicas podem deduzir as doações do Imposto de Renda:</p>
+                        <ul>
+                            <li><strong>Pessoa Física:</strong> até 6% do IR devido</li>
+                            <li><strong>Pessoa Jurídica:</strong> até 1% do IR devido</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <aside class="mt-6">
+                    <h4>Transparência Total</h4>
+                    <p>Publicamos relatórios trimestrais detalhando a aplicação de todos os recursos recebidos. Acesse nossos relatórios na <a href="index.html#transparencia">página inicial</a>.</p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta">
+            <div class="container">
+                <h2>Faça Parte Desta Transformação!</h2>
+                <p>Seja voluntário, faça uma doação ou simplesmente divulgue nosso trabalho. Cada ação conta!</p>
+                <nav>
+                    <a href="cadastro.html" class="btn btn-lg">
+                        <strong>Cadastre-se como Voluntário</strong>
+                    </a>
+                    <a href="#doacoes" class="btn btn-lg btn-secondary">
+                        <strong>Fazer uma Doação</strong>
+                    </a>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="grid grid-cols-1 grid-cols-md-2 grid-cols-lg-3 gap-6">
+                <section id="contato">
+                    <h2>Contato</h2>
+                    <address>
+                        <p><strong>Esperança Solidária</strong></p>
+                        <p>Rua da Esperança, 123 - Centro</p>
+                        <p>São Paulo - SP, CEP: 01234-567</p>
+                        <p>Telefone: <a href="tel:+551133334444">(11) 3333-4444</a></p>
+                        <p>E-mail: <a href="mailto:contato@esperancasolidaria.org.br">contato@esperancasolidaria.org.br</a></p>
+                    </address>
+                </section>
+
+                <section>
+                    <h3>Redes Sociais</h3>
+                    <nav aria-label="Redes sociais">
+                        <ul>
+                            <li><a href="https://facebook.com/esperancasolidaria" target="_blank">Facebook</a></li>
+                            <li><a href="https://instagram.com/esperancasolidaria" target="_blank">Instagram</a></li>
+                            <li><a href="https://youtube.com/esperancasolidaria" target="_blank">YouTube</a></li>
+                            <li><a href="https://linkedin.com/company/esperancasolidaria" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section id="newsletter">
+                    <h2>Newsletter</h2>
+                    <form action="#" method="post">
+                        <label for="email-newsletter">E-mail:</label>
+                        <input type="email" id="email-newsletter" name="email" placeholder="seu@email.com" required>
+                        <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                    </form>
+                </section>
+            </div>
+            
+            <p>&copy; 2025 Esperança Solidária. Todos os direitos reservados. CNPJ: 12.345.678/0001-90</p>
+        </div>
+    </footer>
+
+    <!-- ======================================================
+     SCRIPT TEMPORÁRIO PARA MENU MOBILE
+     Este script contem em todas páginas html:
+     Motivo:
+         Cada página precisa funcionar de forma independente
+         nestE Exercicio Prático II (HTML + CSS), antes da implementação JS.
+     Exercicio Prático III:
+         Este código será removido e substituído por um
+         único arquivo externo (menu.js) na etapa
+         "Manipulação do DOM / SPA".
+     ====================================================== -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('header nav > ul');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        });
+        
+        menuOverlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            menu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

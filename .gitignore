@@ -1,0 +1,59 @@
+# ============================================
+# GITIGNORE - ONG Esperança Solidária
+# ============================================
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Node.js (caso use ferramentas de build)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Builds e Distribuição
+dist/
+# build/  # Comentado - queremos versionar os scripts de build
+.cache/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development
+.env.production
+
+# Backups
+*.backup
+*.bak
+*.old
+
+# Arquivos grandes (opcional - configurar LFS se necessário)
+# *.mp4
+# *.webm
+# *.mp3
+# *.ogg
+
+# Testes
+coverage/
+.nyc_output/
+
+# Arquivos de configuração local
+config.local.js

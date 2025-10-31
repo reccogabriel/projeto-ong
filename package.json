@@ -1,0 +1,45 @@
+{
+  "name": "projeto-ong",
+  "version": "1.4.0",
+  "description": "Plataforma web para ONG Esperança Solidária - Otimizada para produção",
+  "main": "index.html",
+  "scripts": {
+    "build": "node build/build.js",
+    "build:html": "node build/minify-html.js",
+    "build:css": "node build/minify-css.js",
+    "build:js": "node build/minify-js.js",
+    "build:images": "node build/compress-images.js",
+    "clean": "node build/clean.js",
+    "dev": "python -m http.server 8000",
+    "serve:prod": "cd dist && python -m http.server 8080"
+  },
+  "keywords": [
+    "ong",
+    "voluntariado",
+    "projetos-sociais",
+    "acessibilidade",
+    "wcag"
+  ],
+  "author": "Gabriel Recco Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0",
+    "terser": "^5.26.0",
+    "sharp": "^0.33.1",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "fs-extra": "^11.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reccogabriel/projeto-ong.git"
+  },
+  "bugs": {
+    "url": "https://github.com/github.com/reccogabriel/projeto-ong/issues"
+  },
+  "homepage": "https://github.com/github.com/reccogabriel/projeto-ong#readme"
+}
