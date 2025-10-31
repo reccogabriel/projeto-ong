@@ -1,4 +1,4 @@
-# 🤝 Guia de Contribuição
+# Guia de Contribuição
 
 Obrigado por considerar contribuir com o projeto **ONG Esperança Solidária**! Este documento orienta como você pode participar e ajudar a melhorar o projeto.
 
