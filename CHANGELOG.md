@@ -24,7 +24,6 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 - `build/clean.js` - Limpeza de dist/ (25 linhas)
 - `package.json` - Gerenciamento de dependências NPM
 - `BUILD.md` - Documentação completa (900+ linhas)
-- `PARTE_III_COMPLETA.md` - Relatório de implementação
 
 **Minificação Implementada:**
 - **HTML**: html-minifier-terser (27% de redução)
@@ -230,7 +229,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
   - Grid fluido
 
   -------------------------------
-### Exercicio Prático I ## [1.0.0] - 2025-10-20
+### Exercicio Prático I ## [1.1.0] - 2025-10-20
 
 
 - **Estrutura Base do Projeto**
