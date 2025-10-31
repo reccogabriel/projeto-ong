@@ -1145,6 +1145,85 @@ projeto-ong/
 7. **Totalmente Responsivo** - Desktop, Tablet, Mobile
 8. **Acessível** - WCAG 2.1 considerado
 
+
+# Exercício Prático IV - Versionamento, Acessibilidade e Deploy
+
+## Entrega IV – Versionamento, Acessibilidade e Deploy
+
+### Objetivo
+
+Esta entrega consolida o projeto através da implementação de práticas profissionais de desenvolvimento, incluindo controle de versão, padrões de acessibilidade WCAG 2.1 e otimização para ambiente de produção.
+
+### Funcionalidades Implementadas
+
+#### Controle de Versão (Git/GitHub)
+
+- **GitFlow**: Estratégia de branching com branches `main`, `develop` e `feature/*`
+- **Commits Semânticos**: Histórico organizado seguindo padrão conventional commits
+- **Versionamento Semântico**: Sistema de releases seguindo padrão SemVer (X.Y.Z)
+- **Pull Requests**: Documentação completa de alterações e revisões de código
+- **Issues e Milestones**: Organização de tarefas e acompanhamento de progresso
+
+#### Acessibilidade (WCAG 2.1 - Nível AA)
+
+- **Navegação por Teclado**: Todos os componentes interativos acessíveis via teclado
+- **HTML Semântico**: Estrutura adequada com uso correto de tags semânticas
+- **Contraste de Cores**: Razão mínima de 4.5:1 para textos normais
+- **Leitores de Tela**: Atributos ARIA e labels descritivos implementados
+- **Modos de Visualização**: Suporte para modo escuro e alto contraste
+
+#### Otimização para Produção
+
+- **Minificação**: CSS, JavaScript e HTML otimizados
+- **Compressão de Imagens**: Redução de tamanho mantendo qualidade visual
+- **Performance**: Carregamento otimizado e tempo de resposta reduzido
+
+### Tecnologias e Ferramentas
+
+- Git & GitHub
+- HTML5 Semântico
+- CSS3 (com foco em acessibilidade)
+- JavaScript
+- Ferramentas de minificação e otimização
+
+### Como Verificar
+
+1. **Controle de Versão**:
+```bash
+   git log --oneline --graph --all
+   git branch -a
+```
+
+2. **Acessibilidade**:
+   - Navegue pelo site usando apenas a tecla `Tab`
+   - Teste com leitores de tela (NVDA, JAWS ou VoiceOver)
+   - Verifique o contraste usando ferramentas como WebAIM Contrast Checker
+
+3. **Deploy e Otimização**:
+   - Acesse o site em produção
+   - Utilize o Lighthouse do Chrome DevTools para auditoria
+
+### Documentação Adicional
+
+- [Histórico de Versões](CHANGELOG.md)
+- [Guia de Contribuição](CONTRIBUTING.md)
+- [Relatório de Acessibilidade](docs/ACCESSIBILITY.md)
+
+### Checklist de Conformidade
+
+- [x] GitFlow implementado
+- [x] Commits semânticos
+- [x] Versionamento semântico
+- [x] Pull Requests documentados
+- [x] Issues e milestones configurados
+- [x] Navegação por teclado funcional
+- [x] HTML semântico
+- [x] Contraste de cores adequado
+- [x] Suporte a leitores de tela
+- [x] Modo escuro e alto contraste
+- [x] Código minificado
+- [x] Imagens otimizadas
+
 ---
 
 ## Autor
