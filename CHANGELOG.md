@@ -250,7 +250,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 - **Projetos**: Banner, 4 projetos detalhados (Educação, Esporte, Cultura, Família), call-to-action
 - **Cadastro**: Introdução, formulário completo, FAQs, informações de contato
 
-#### 🛠️ Tecnologias
+#### Tecnologias
 - HTML5 semântico
 - CSS3 modular
 - JavaScript ES6+
