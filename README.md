@@ -20,15 +20,15 @@
 
 ---
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto consiste em uma **plataforma web completa** desenvolvida para a ONG fictícia **Esperança Solidária**, implementando as melhores práticas de desenvolvimento web moderno, incluindo:
 
-- 🎯 **Git/GitHub** - Workflow profissional com GitFlow, commits semânticos e versionamento SemVer
-- ♿ **Acessibilidade** - WCAG 2.1 Nível AA (100% conforme)
-- 🚀 **Otimização** - Build system com minificação e compressão (46% de redução)
+- **Git/GitHub** - Workflow profissional com GitFlow, commits semânticos e versionamento SemVer
+- **Acessibilidade** - WCAG 2.1 Nível AA (100% conforme)
+- **Otimização** - Build system com minificação e compressão (46% de redução)
 
-### ✨ Destaques
+### Destaques
 
 - Aplicar fundamentos de HTML5 com estrutura semântica
 - Criar formulários complexos com validação nativa
