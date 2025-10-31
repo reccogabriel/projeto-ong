@@ -12,7 +12,7 @@
 
 **Plataforma web completa e acessível para organizações do terceiro setor**
 
-[Demo](https://demo-url.com) • [Documentação](BUILD.md) • [Acessibilidade](ACCESSIBILITY.md) • [Contribuir](CONTRIBUTING.md)
+[Documentação](BUILD.md) • [Acessibilidade](ACCESSIBILITY.md) • [Contribuir](CONTRIBUTING.md)
 
 </div>
 
