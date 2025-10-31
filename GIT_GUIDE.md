@@ -1,4 +1,4 @@
-# 🌳 Guia Completo: Git/GitHub com GitFlow
+# Guia Completo: Git/GitHub com GitFlow
 
 Este guia contém todos os comandos e procedimentos para implementar controle de versão com GitFlow e versionamento semântico.
 
@@ -73,7 +73,7 @@ git remote -v
 git push -u origin main
 ```
 
-✅ **Checkpoint**: Seu repositório agora está no GitHub!
+**Checkpoint**: Seu repositório agora está no GitHub!
 
 ---
 
