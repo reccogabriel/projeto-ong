@@ -311,6 +311,8 @@ projeto-ong/
 ├── css/                      # Arquivos fonte
 ├── js/                       # Arquivos fonte
 ├── imagens/                  # Imagens originais
+├── videos/                   # Videos originais
+├── audios/                   # Audios originais
 │
 ├── package.json             # Configuração NPM
 └── BUILD.md                 # Esta documentação
