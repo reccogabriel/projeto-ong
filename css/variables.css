@@ -1,0 +1,188 @@
+/* ============================================
+   DESIGN SYSTEM - VARIÁVEIS CSS
+   Sistema de design consistente para ONG Esperança Solidária
+   ============================================ */
+
+:root {
+  /* ============================================
+     PALETA DE CORES
+     ============================================ */
+  
+  /* Cores Primárias */
+  --primary-color: #2563eb;        /* Azul principal */
+  --primary-light: #3b82f6;        /* Azul claro */
+  --primary-dark: #1e40af;         /* Azul escuro */
+  
+  /* Cores Secundárias */
+  --secondary-color: #10b981;      /* Verde (solidariedade) */
+  --secondary-light: #34d399;      /* Verde claro */
+  --secondary-dark: #059669;       /* Verde escuro */
+  
+  /* Cores de Acento */
+  --accent-color: #f59e0b;         /* Laranja (energia) */
+  --accent-light: #fbbf24;         /* Laranja claro */
+  
+  /* Cores Neutras */
+  --neutral-50: #f9fafb;           /* Cinza muito claro */
+  --neutral-100: #f3f4f6;          /* Cinza claro */
+  --neutral-200: #e5e7eb;          /* Cinza claro médio */
+  --neutral-300: #d1d5db;          /* Cinza médio */
+  --neutral-400: #9ca3af;          /* Cinza */
+  --neutral-500: #6b7280;          /* Cinza escuro */
+  --neutral-600: #4b5563;          /* Cinza muito escuro */
+  --neutral-700: #374151;          /* Cinza quase preto */
+  --neutral-800: #1f2937;          /* Cinza escuro profundo */
+  --neutral-900: #111827;          /* Quase preto */
+  
+  /* Cores Semânticas */
+  --success-color: #10b981;        /* Verde sucesso */
+  --error-color: #ef4444;          /* Vermelho erro */
+  --warning-color: #f59e0b;        /* Laranja aviso */
+  --info-color: #00183f;           /* Azul informação */
+  
+  /* Cores de Fundo */
+  --bg-primary: #ffffff;           /* Branco */
+  --bg-secondary: #f9fafb;         /* Cinza muito claro */
+  --bg-dark: #1f2937;              /* Fundo escuro */
+  
+  /* Cores de Texto */
+  --text-primary: #111827;         /* Texto principal */
+  --text-secondary: #6b7280;       /* Texto secundário */
+  --text-light: #9ca3af;           /* Texto claro */
+  --text-white: #ffffff;           /* Texto branco */
+  
+  /* ============================================
+     TIPOGRAFIA
+     ============================================ */
+  
+  /* Família de Fontes */
+  --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-secondary: Georgia, 'Times New Roman', serif;
+  --font-mono: 'Courier New', monospace;
+  
+  /* Tamanhos de Fonte - Hierarquia */
+  --font-size-xs: 0.75rem;         /* 12px */
+  --font-size-sm: 0.875rem;        /* 14px */
+  --font-size-base: 1rem;          /* 16px */
+  --font-size-lg: 1.125rem;        /* 18px */
+  --font-size-xl: 1.25rem;         /* 20px */
+  --font-size-2xl: 1.5rem;         /* 24px */
+  --font-size-3xl: 1.875rem;       /* 30px */
+  --font-size-4xl: 2.25rem;        /* 36px */
+  --font-size-5xl: 3rem;           /* 48px */
+  --font-size-6xl: 3.75rem;        /* 60px */
+  
+  /* Peso da Fonte */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Altura de Linha */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+  
+  /* ============================================
+     SISTEMA DE ESPAÇAMENTO MODULAR
+     ============================================ */
+  
+  --spacing-1: 0.5rem;             /* 8px */
+  --spacing-2: 1rem;               /* 16px */
+  --spacing-3: 1.5rem;             /* 24px */
+  --spacing-4: 2rem;               /* 32px */
+  --spacing-5: 2.5rem;             /* 40px */
+  --spacing-6: 3rem;               /* 48px */
+  --spacing-7: 3.5rem;             /* 56px */
+  --spacing-8: 4rem;               /* 64px */
+  --spacing-10: 5rem;              /* 80px */
+  --spacing-12: 6rem;              /* 96px */
+  
+  /* ============================================
+     BORDAS E RAIOS
+     ============================================ */
+  
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+  
+  --border-radius-sm: 0.25rem;     /* 4px */
+  --border-radius-md: 0.5rem;      /* 8px */
+  --border-radius-lg: 0.75rem;     /* 12px */
+  --border-radius-xl: 1rem;        /* 16px */
+  --border-radius-2xl: 1.5rem;     /* 24px */
+  --border-radius-full: 9999px;    /* Círculo completo */
+  
+  /* ============================================
+     SOMBRAS
+     ============================================ */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* ============================================
+     TRANSIÇÕES E ANIMAÇÕES
+     ============================================ */
+  
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ============================================
+     BREAKPOINTS (para referência em media queries)
+     ============================================ */
+  
+  /* 
+  --breakpoint-xs: 320px;    // Smartphones pequenos
+  --breakpoint-sm: 576px;    // Smartphones
+  --breakpoint-md: 768px;    // Tablets
+  --breakpoint-lg: 992px;    // Desktops pequenos
+  --breakpoint-xl: 1200px;   // Desktops
+  --breakpoint-2xl: 1400px;  // Desktops grandes
+  */
+  
+  /* ============================================
+     SISTEMA DE GRID
+     ============================================ */
+  
+  --grid-columns: 12;
+  --grid-gap: var(--spacing-3);
+  --container-max-width: 1200px;
+  --container-padding: var(--spacing-2);
+  
+  /* ============================================
+     Z-INDEX (Camadas de Empilhamento)
+     ============================================ */
+  
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ============================================
+   MODO ESCURO (Opcional - Preparado para futuro)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #1f2937;
+    --bg-secondary: #111827;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+  }
+}

@@ -1,0 +1,297 @@
+/* ============================================
+   SISTEMA TIPOGRÁFICO
+   Hierarquia de títulos, parágrafos e textos
+   ============================================ */
+
+/* ============================================
+   TÍTULOS (HEADINGS)
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+h6 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   PARÁGRAFOS E TEXTOS
+   ============================================ */
+
+p {
+  margin-bottom: var(--spacing-2);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lead text - Texto de destaque */
+.lead {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+}
+
+/* Small text */
+small, .small {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+/* ============================================
+   ÊNFASE E FORMATAÇÃO
+   ============================================ */
+
+strong, b {
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-color);
+}
+
+em, i {
+  font-style: italic;
+}
+
+mark {
+  background-color: var(--accent-light);
+  color: var(--text-primary);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--border-radius-sm);
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 1px dotted var(--text-light);
+}
+
+/* ============================================
+   CITAÇÕES
+   ============================================ */
+
+blockquote {
+  margin: var(--spacing-4) 0;
+  padding: var(--spacing-3) var(--spacing-4);
+  border-left: 4px solid var(--primary-color);
+  background-color: var(--neutral-50);
+  border-radius: var(--border-radius-md);
+}
+
+blockquote p {
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-2);
+}
+
+blockquote footer {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+  margin-top: var(--spacing-2);
+}
+
+blockquote footer::before {
+  content: "— ";
+}
+
+/* ============================================
+   CÓDIGO
+   ============================================ */
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: var(--neutral-100);
+  color: var(--error-color);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--border-radius-sm);
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  background-color: var(--neutral-900);
+  color: var(--neutral-100);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius-md);
+  overflow-x: auto;
+  margin: var(--spacing-3) 0;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* ============================================
+   LISTAS
+   ============================================ */
+
+ul, ol {
+  margin: var(--spacing-2) 0;
+  padding-left: var(--spacing-4);
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: var(--spacing-1);
+  line-height: var(--line-height-relaxed);
+  color: var(--text-secondary);
+}
+
+li::marker {
+  color: var(--primary-color);
+}
+
+/* Listas aninhadas */
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: var(--spacing-1);
+  margin-bottom: var(--spacing-1);
+}
+
+/* Lista de definição */
+dl {
+  margin: var(--spacing-2) 0;
+}
+
+dt {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-1);
+}
+
+dd {
+  margin-left: var(--spacing-3);
+  margin-bottom: var(--spacing-2);
+  color: var(--text-secondary);
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Link externo */
+a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 0.85em;
+}
+
+/* ============================================
+   UTILITÁRIOS TIPOGRÁFICOS
+   ============================================ */
+
+/* Tamanhos de texto */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+
+/* Pesos de fonte */
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+/* Cores de texto */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-light { color: var(--text-light); }
+.text-white { color: var(--text-white); }
+.text-success { color: var(--success-color); }
+.text-error { color: var(--error-color); }
+.text-warning { color: var(--warning-color); }
+
+/* Alinhamento */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* Transformação */
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+/* Decoração */
+.text-underline { text-decoration: underline; }
+.text-line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+
+/* Quebra de linha */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-break {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}

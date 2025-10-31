@@ -1,0 +1,426 @@
+/* ============================================
+   FORMULÁRIOS ESTILIZADOS
+   Inputs, Selects, Textareas, Validação Visual
+   ============================================ */
+
+/* ============================================
+   ESTRUTURA GERAL DO FORMULÁRIO
+   ============================================ */
+
+form {
+  width: 100%;
+  max-width: 100%;
+}
+
+fieldset {
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+legend {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  padding: 0 var(--spacing-2);
+}
+
+/* ============================================
+   LABELS
+   ============================================ */
+
+label {
+  display: block;
+  font-weight: var(--font-weight-medium);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-1);
+  font-size: var(--font-size-sm);
+}
+
+label abbr[title] {
+  color: var(--error-color);
+  text-decoration: none;
+}
+
+/* ============================================
+   INPUTS GERAIS
+   ============================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  border: 2px solid var(--neutral-300);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-fast);
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Fix para mobile */
+@media (max-width: 600px) {
+  input[type="date"] {
+    min-height: 44px;
+    font-size: 16px; /* Evita zoom no iOS */
+  }
+}
+input[type="search"],
+select,
+textarea {
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  border: 2px solid var(--neutral-300);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+/* Estado de foco */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Estado hover */
+input:hover:not(:focus):not(:disabled),
+select:hover:not(:focus):not(:disabled),
+textarea:hover:not(:focus):not(:disabled) {
+  border-color: var(--neutral-400);
+}
+
+/* Estado desabilitado */
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: var(--neutral-100);
+  color: var(--text-light);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-light);
+  opacity: 0.7;
+}
+
+/* ============================================
+   VALIDAÇÃO VISUAL
+   ============================================ */
+
+/* Input válido */
+input:valid:not(:placeholder-shown),
+select:valid,
+textarea:valid:not(:placeholder-shown) {
+  border-color: var(--success-color);
+}
+
+input:valid:not(:placeholder-shown):focus {
+  border-color: var(--success-color);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Input inválido */
+input:invalid:not(:placeholder-shown),
+select:invalid,
+textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--error-color);
+}
+
+input:invalid:not(:placeholder-shown):focus {
+  border-color: var(--error-color);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Ícones de validação */
+input:valid:not(:placeholder-shown) {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%2310b981"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-2) center;
+  background-size: 20px;
+  padding-right: calc(var(--spacing-3) + 28px);
+}
+
+input:invalid:not(:placeholder-shown) {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23ef4444"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-2) center;
+  background-size: 20px;
+  padding-right: calc(var(--spacing-3) + 28px);
+}
+
+/* ============================================
+   MENSAGENS DE AJUDA E ERRO
+   ============================================ */
+
+small {
+  display: block;
+  margin-top: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+.error-message {
+  display: none;
+  color: var(--error-color);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-1);
+}
+
+input:invalid:not(:placeholder-shown) ~ .error-message {
+  display: block;
+}
+
+.success-message {
+  display: none;
+  color: var(--success-color);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-1);
+}
+
+input:valid:not(:placeholder-shown) ~ .success-message {
+  display: block;
+}
+
+/* ============================================
+   DIV DE CAMPO
+   ============================================ */
+
+form > div,
+fieldset > div {
+  margin-bottom: var(--spacing-3);
+}
+
+form > div:last-child,
+fieldset > div:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   SELECT
+   ============================================ */
+
+select {
+  cursor: pointer;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%236b7280"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-2) center;
+  background-size: 20px;
+  padding-right: calc(var(--spacing-3) + 28px);
+  appearance: none;
+}
+
+select:focus {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%232563eb"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>');
+}
+
+select[multiple] {
+  background-image: none;
+  padding-right: var(--spacing-3);
+  height: auto;
+}
+
+/* ============================================
+   TEXTAREA
+   ============================================ */
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+/* ============================================
+   CHECKBOXES E RADIO BUTTONS
+   ============================================ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: var(--spacing-1);
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
+/* Container para checkbox/radio inline */
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.form-check input {
+  margin-right: var(--spacing-2);
+}
+
+.form-check label {
+  margin-bottom: 0;
+  font-weight: var(--font-weight-normal);
+  cursor: pointer;
+}
+
+/* ============================================
+   INPUT GROUP (Ícones e addons)
+   ============================================ */
+
+.input-group {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.input-group-addon {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--neutral-100);
+  border: 2px solid var(--neutral-300);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.input-group-addon:first-child {
+  border-right: none;
+  border-radius: var(--border-radius-md) 0 0 var(--border-radius-md);
+}
+
+.input-group-addon:last-child {
+  border-left: none;
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+}
+
+.input-group input:focus ~ .input-group-addon {
+  border-color: var(--primary-color);
+}
+
+/* ============================================
+   SEARCH INPUT
+   ============================================ */
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding-left: calc(var(--spacing-3) + 28px);
+}
+
+.search-box::before {
+  content: "🔍";
+  position: absolute;
+  left: var(--spacing-2);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-lg);
+  pointer-events: none;
+}
+
+/* ============================================
+   RANGE INPUT
+   ============================================ */
+
+input[type="range"] {
+  width: 100%;
+  height: 6px;
+  background: var(--neutral-200);
+  border-radius: var(--border-radius-full);
+  outline: none;
+  padding: 0;
+  margin: var(--spacing-2) 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: var(--border-radius-full);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: var(--border-radius-full);
+  cursor: pointer;
+  border: none;
+}
+
+/* ============================================
+   FILE INPUT
+   ============================================ */
+
+input[type="file"] {
+  padding: var(--spacing-2);
+  border: 2px dashed var(--neutral-300);
+  cursor: pointer;
+}
+
+input[type="file"]:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* ============================================
+   BOTÕES DE FORMULÁRIO
+   ============================================ */
+
+form button[type="submit"],
+form button[type="reset"],
+form input[type="submit"],
+form input[type="reset"] {
+  margin-top: var(--spacing-3);
+}
+
+/* Grupo de botões */
+.form-buttons {
+  display: flex;
+  gap: var(--spacing-2);
+  justify-content: flex-end;
+  margin-top: var(--spacing-4);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--neutral-200);
+}
+
+/* ============================================
+   FORMULÁRIO INLINE
+   ============================================ */
+
+.form-inline {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: end;
+}
+
+.form-inline > div {
+  flex: 1;
+  margin-bottom: 0;
+}
