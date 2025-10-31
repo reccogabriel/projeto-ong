@@ -1,0 +1,477 @@
+/* ============================================
+   SISTEMA DE NAVEGAÇÃO
+   Menu responsivo com hambúrguer e dropdown
+   ============================================ */
+
+/* ============================================
+   HEADER E NAVEGAÇÃO PRINCIPAL
+   ============================================ */
+
+header {
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  transition: var(--transition-normal);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) var(--container-padding);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Logo/Brand */
+header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* Ajuste mobile para logo menor */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: var(--font-size-lg);
+    max-width: 60%;
+  }
+  
+  header nav {
+    padding: var(--spacing-2);
+  }
+}
+
+header h1 a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+header h1 a:hover {
+  color: var(--primary-dark);
+}
+
+/* ============================================
+   MENU PRINCIPAL (DESKTOP)
+   ============================================ */
+
+header nav > ul {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav > ul > li {
+  position: relative;
+  margin: 0;
+}
+
+header nav > ul > li > a {
+  display: block;
+  padding: var(--spacing-1) var(--spacing-2);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-fast);
+}
+
+header nav > ul > li > a:hover {
+  color: var(--primary-color);
+  background-color: var(--neutral-50);
+}
+
+header nav > ul > li > a:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Link ativo */
+header nav > ul > li > a.active {
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+  background-color: rgba(37, 99, 235, 0.1);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ============================================
+   SUBMENU DROPDOWN
+   ============================================ */
+
+/* Container do submenu */
+header nav ul li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-1);
+  margin-top: var(--spacing-1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--transition-normal);
+  z-index: var(--z-dropdown);
+}
+
+/* Mostrar submenu no hover */
+header nav ul li:hover > ul,
+header nav ul li:focus-within > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Itens do submenu */
+header nav ul li ul li {
+  margin: 0;
+}
+
+header nav ul li ul li a {
+  display: block;
+  padding: var(--spacing-1) var(--spacing-2);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-fast);
+}
+
+header nav ul li ul li a:hover {
+  background-color: var(--neutral-50);
+  color: var(--primary-color);
+  padding-left: calc(var(--spacing-2) + 8px);
+}
+
+/* Indicador de submenu */
+header nav > ul > li.has-submenu > a::after {
+  content: " ▾";
+  font-size: 0.8em;
+  margin-left: 0.25rem;
+}
+
+/* ============================================
+   MENU HAMBÚRGUER (MOBILE)
+   ============================================ */
+
+/* Botão hambúrguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: var(--z-fixed);
+}
+
+/* Mostrar apenas no mobile */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-primary);
+  border-radius: var(--border-radius-full);
+  transition: var(--transition-normal);
+}
+
+/* Animação do hambúrguer quando ativo */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* ============================================
+   FOOTER NAVIGATION
+   ============================================ */
+
+footer nav {
+  margin-top: var(--spacing-4);
+}
+
+footer nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer nav a {
+  color: var(--neutral-300);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+footer nav a:hover {
+  color: var(--text-white);
+  text-decoration: underline;
+}
+
+/* ============================================
+   BREADCRUMB (Navegação em Migalhas)
+   ============================================ */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-2) 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "›";
+  margin-left: var(--spacing-1);
+  color: var(--text-light);
+}
+
+/* ============================================
+   TABS NAVIGATION
+   ============================================ */
+
+.tabs {
+  display: flex;
+  gap: var(--spacing-1);
+  border-bottom: 2px solid var(--neutral-200);
+  margin-bottom: var(--spacing-4);
+}
+
+.tabs button {
+  padding: var(--spacing-2) var(--spacing-3);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  margin-bottom: -2px;
+}
+
+.tabs button:hover {
+  color: var(--primary-color);
+}
+
+.tabs button.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* ============================================
+   PAGINATION
+   ============================================ */
+
+.pagination {
+  display: flex;
+  gap: var(--spacing-1);
+  justify-content: center;
+  align-items: center;
+  margin: var(--spacing-6) 0;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 var(--spacing-2);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--border-radius-md);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.pagination a:hover {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border-color: var(--primary-color);
+}
+
+.pagination span.active {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border-color: var(--primary-color);
+  font-weight: var(--font-weight-semibold);
+}
+
+.pagination span.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   ACESSIBILIDADE - SKIP LINK
+   ============================================ */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: var(--text-white);
+  padding: var(--spacing-1) var(--spacing-2);
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============================================
+   AJUSTE PARA MENU MOBILE
+   ============================================ */
+
+/* MENU MOBILE */
+@media (max-width: 600px) {
+  /* Esconder menu por padrão no mobile */
+  header nav > ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    padding: 80px 0 20px 0;
+    margin: 0;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+  }
+  
+  /* Menu ativo - aparecer da direita */
+  header nav > ul.active {
+    display: flex !important;
+    flex-direction: column !important; /* CRÍTICO! */
+    align-items: stretch !important;
+    gap: 0 !important;
+    transform: translateX(0);
+  }
+  
+  /* Itens do menu mobile */
+  header nav > ul > li {
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid var(--neutral-200);
+  }
+  
+  header nav > ul > li:last-child {
+    border-bottom: none;
+  }
+  
+  header nav > ul > li > a {
+    display: block;
+    padding: 1rem 1.5rem !important;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    border-radius: 0 !important;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: left;
+  }
+  
+  header nav > ul > li > a:hover,
+  header nav > ul > li > a.active {
+    background-color: var(--primary-color);
+    color: white;
+    padding-left: 2rem !important;
+  }
+  
+  /* Botão X para fechar */
+  header nav > ul.active::before {
+    content: "✕";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--neutral-100);
+    transition: all 0.2s ease;
+  }
+  
+  header nav > ul.active::before:hover {
+    background-color: var(--error-color);
+    color: white;
+    transform: rotate(90deg);
+  }
+}
+
+/* OVERLAY - FUNDO ESCURO */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* BOTÃO HAMBURGUER VISIVEL */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: flex !important;
+    z-index: 1001;
+  }
+}

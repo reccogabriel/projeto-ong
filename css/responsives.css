@@ -1,0 +1,750 @@
+/* ============================================
+   RESPONSIVIDADE - MOBILE FIRST
+   5+ Breakpoints para diferentes dispositivos
+   ============================================ */
+
+/* ============================================
+   BREAKPOINT 1: Mobile Extra Small (320px+)
+   Base - Mobile First
+   ============================================ */
+
+/* Já aplicado nos outros arquivos CSS */
+
+/* ============================================
+   BREAKPOINT 2: Mobile Small (576px+)
+   Smartphones em modo paisagem
+   ============================================ */
+
+@media (min-width: 576px) {
+  
+  /* Container */
+  .container {
+    padding: 0 var(--spacing-3);
+  }
+  
+  /* Tipografia */
+  h1 { font-size: var(--font-size-5xl); }
+  h2 { font-size: var(--font-size-4xl); }
+  
+  /* Grid */
+  .grid-cols-sm-2 { grid-template-columns: repeat(2, 1fr); }
+  .col-span-sm-6 { grid-column: span 6; }
+  
+  /* Cards */
+  .card-body {
+    padding: var(--spacing-5);
+  }
+  
+  /* Botões */
+  .btn {
+    padding: var(--spacing-2) var(--spacing-5);
+  }
+}
+
+/* ============================================
+   BREAKPOINT 3: Tablet (768px+)
+   Tablets e dispositivos médios
+   ============================================ */
+
+@media (min-width: 768px) {
+  
+  /* Tipografia */
+  html {
+    font-size: 17px;
+  }
+  
+  h1 { font-size: var(--font-size-6xl); }
+  
+  /* Container */
+  .container {
+    padding: 0 var(--spacing-4);
+  }
+  
+  /* ============================================
+     NAVEGAÇÃO DESKTOP
+     ============================================ */
+  
+  /* Mostrar menu desktop */
+  header nav > ul {
+    display: flex;
+  }
+  
+  /* Esconder menu hambúrguer */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* ============================================
+     GRID
+     ============================================ */
+  
+  .grid-cols-md-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-md-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-md-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  .col-span-md-3 { grid-column: span 3; }
+  .col-span-md-4 { grid-column: span 4; }
+  .col-span-md-6 { grid-column: span 6; }
+  .col-span-md-8 { grid-column: span 8; }
+  
+  /* ============================================
+     LAYOUT
+     ============================================ */
+  
+  section {
+    padding: var(--spacing-8) 0;
+  }
+  
+  #hero {
+    padding: var(--spacing-10) 0;
+  }
+  
+  /* ============================================
+     FORMULÁRIOS
+     ============================================ */
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-3);
+  }
+  
+  .form-row.three-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* ============================================
+     FOOTER
+     ============================================ */
+  
+  footer {
+    padding: var(--spacing-8) 0 var(--spacing-4);
+  }
+  
+  footer .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   BREAKPOINT 4: Desktop Small (992px+)
+   Desktops pequenos e laptops
+   ============================================ */
+
+@media (min-width: 992px) {
+  
+  /* Tipografia */
+  html {
+    font-size: 18px;
+  }
+  
+  /* Container */
+  .container {
+    padding: 0 var(--spacing-6);
+  }
+  
+  /* ============================================
+     GRID
+     ============================================ */
+  
+  .grid-cols-lg-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-cols-lg-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  .col-span-lg-2 { grid-column: span 2; }
+  .col-span-lg-3 { grid-column: span 3; }
+  .col-span-lg-4 { grid-column: span 4; }
+  .col-span-lg-6 { grid-column: span 6; }
+  
+  /* ============================================
+     LAYOUT
+     ============================================ */
+  
+  section {
+    padding: var(--spacing-10) 0;
+  }
+  
+  /* Hero section maior */
+  #hero {
+    padding: var(--spacing-12) 0;
+  }
+  
+  #hero h2 {
+    font-size: var(--font-size-5xl);
+  }
+  
+  /* ============================================
+     CARDS
+     ============================================ */
+  
+  .card:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* ============================================
+     TABELAS
+     ============================================ */
+  
+  table {
+    font-size: var(--font-size-base);
+  }
+  
+  /* ============================================
+     FOOTER
+     ============================================ */
+  
+  footer .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   BREAKPOINT 5: Desktop (1200px+)
+   Desktops médios e grandes
+   ============================================ */
+
+@media (min-width: 1200px) {
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+  }
+  
+  /* ============================================
+     GRID
+     ============================================ */
+  
+  .grid-cols-xl-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-cols-xl-5 { grid-template-columns: repeat(5, 1fr); }
+  .grid-cols-xl-6 { grid-template-columns: repeat(6, 1fr); }
+  
+  .col-span-xl-3 { grid-column: span 3; }
+  .col-span-xl-4 { grid-column: span 4; }
+  
+  /* ============================================
+     LAYOUT
+     ============================================ */
+  
+  #hero h2 {
+    font-size: var(--font-size-6xl);
+  }
+  
+  /* ============================================
+     FOOTER
+     ============================================ */
+  
+  footer .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ============================================
+   BREAKPOINT 6: Desktop Large (1400px+)
+   Monitores ultrawide e telas grandes
+   ============================================ */
+
+@media (min-width: 1400px) {
+  
+  /* Container */
+  .container {
+    max-width: 1320px;
+  }
+  
+  /* Tipografia */
+  html {
+    font-size: 19px;
+  }
+  
+  /* Grid */
+  .grid-cols-2xl-6 { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* ============================================
+   NAVEGAÇÃO MOBILE (abaixo de 600px)
+   Menu Hambúrguer
+   ============================================ */
+
+@media (max-width: 600px) {
+  
+  /* Mostrar botão hambúrguer */
+  .menu-toggle {
+    display: flex !important;
+    position: relative;
+    z-index: 1001;
+  }
+  
+  /* Menu lateral mobile */
+  header nav > ul {
+    position: fixed !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 280px !important;
+    max-width: 80vw !important;
+    height: 100vh !important;
+    background-color: var(--bg-primary) !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: var(--spacing-8) var(--spacing-4) var(--spacing-4) !important;
+    box-shadow: var(--shadow-xl) !important;
+    transition: left 0.3s ease !important;
+    overflow-y: auto !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    gap: 0 !important;
+  }
+  
+  /* Menu aberto */
+  header nav > ul.active {
+    left: 0 !important;
+  }
+  
+  /* Itens do menu mobile - FORÇAR VERTICAL */
+  header nav > ul > li {
+    width: 100% !important;
+    margin-bottom: var(--spacing-3) !important;
+    display: block !important;
+  }
+  
+  header nav > ul > li > a {
+    width: 100% !important;
+    padding: var(--spacing-2) var(--spacing-3) !important;
+    display: block !important;
+    font-size: var(--font-size-lg) !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+  
+  /* BOTÃO X PARA FECHAR */
+  header nav > ul::before {
+    content: "✕";
+    position: absolute;
+    top: var(--spacing-3);
+    right: var(--spacing-3);
+    font-size: 2rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-fast);
+    line-height: 1;
+  }
+  
+  header nav > ul::before:hover {
+    background-color: var(--neutral-100);
+  }
+  
+  /* Overlay */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-normal);
+    z-index: 999;
+  }
+  
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* LAYOUT MOBILE */
+  section {
+    padding: var(--spacing-4) 0;
+  }
+  
+  #hero {
+    padding: var(--spacing-6) 0;
+  }
+  
+  /* GRID MOBILE */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* CARDS MOBILE */
+  .card {
+    margin-bottom: var(--spacing-3);
+  }
+  
+  /* FORMULÁRIOS MOBILE */
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .form-buttons {
+    flex-direction: column;
+  }
+  
+  .form-buttons .btn {
+    width: 100%;
+  }
+  
+  /* TABELAS MOBILE */
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  table {
+    min-width: 600px;
+  }
+  
+  /* MODAL MOBILE */
+  .modal {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  /* FOOTER MOBILE */
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-4);
+  }
+  
+  footer nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  
+
+/* ============================================
+   UTILITÁRIOS RESPONSIVOS
+   ============================================ */
+
+/* Esconder em mobile */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Esconder em tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+/* Esconder em desktop */
+@media (min-width: 992px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Mostrar apenas em mobile */
+.show-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+/* Mostrar apenas em tablet */
+.show-tablet {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .show-tablet {
+    display: block !important;
+  }
+}
+
+/* Mostrar apenas em desktop */
+.show-desktop {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .show-desktop {
+    display: block !important;
+  }
+}
+
+/* ============================================
+   ORIENTAÇÃO - LANDSCAPE E PORTRAIT
+   ============================================ */
+
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Ajustes para dispositivos em paisagem com pouca altura */
+  header nav > ul {
+    max-height: calc(100vh - 60px);
+  }
+  
+  section {
+    padding: var(--spacing-3) 0;
+  }
+}
+
+/* ============================================
+   IMPRESSÃO
+   ============================================ */
+
+@media print {
+  /* Esconder elementos não necessários na impressão */
+  header nav,
+  .menu-toggle,
+  .btn,
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Remover sombras e efeitos */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  /* Otimizar cores para impressão */
+  body {
+    background: white;
+    color: black;
+  }
+  
+  /* Links */
+  a {
+    text-decoration: underline;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+  
+  /* Evitar quebras de página em elementos */
+  h1, h2, h3, h4, h5, h6,
+  .card,
+  .projeto-card {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  /* Margens de página */
+  @page {
+    margin: 2cm;
+  }
+}
+
+/* ============================================
+   PREFERÊNCIAS DO USUÁRIO
+   ============================================ */
+
+/* Reduzir movimento para quem tem sensibilidade */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Modo escuro (preparado para futuro) */
+@media (prefers-color-scheme: dark) {
+  /* As variáveis já estão definidas em variables.css */
+}
+
+/* Alto contraste */
+@media (prefers-contrast: high) {
+  :root {
+    --shadow-sm: none;
+    --shadow-md: 0 0 0 2px black;
+    --shadow-lg: 0 0 0 3px black;
+  }
+  
+  .btn {
+    border-width: 3px;
+  }
+  
+  input,
+  select,
+  textarea {
+    border-width: 3px;
+  }
+}
+
+/* ============================================
+   TOUCH DEVICES
+   ============================================ */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Aumentar áreas de toque para dispositivos touch */
+  .btn,
+  a,
+  button,
+  input[type="submit"],
+  input[type="button"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Remover hover effects em touch devices */
+  .card:hover {
+    transform: none;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   RESPONSIVIDADE DE IMAGENS
+   ============================================ */
+
+@media (max-width: 767px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-img {
+    height: 150px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .card-img {
+    height: 180px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-img {
+    height: 220px;
+  }
+}
+
+/* ============================================
+   ACESSIBILIDADE RESPONSIVA
+   ============================================ */
+
+/* Foco visível maior em telas pequenas */
+@media (max-width: 767px) {
+  :focus {
+    outline-width: 3px;
+    outline-offset: 3px;
+  }
+}
+
+/* ============================================
+   PERFORMANCE - OTIMIZAÇÕES
+   ============================================ */
+
+/* Lazy loading hint para navegadores */
+img[loading="lazy"] {
+  content-visibility: auto;
+}
+
+/* GPU acceleration para animações */
+.card,
+.btn,
+.menu-toggle {
+  will-change: transform;
+}
+
+/* Otimização de scroll */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ============================================
+   CONTAINER QUERIES (Suporte futuro)
+   ============================================ */
+
+@supports (container-type: inline-size) {
+  .card-container {
+    container-type: inline-size;
+  }
+  
+  @container (min-width: 400px) {
+    .card {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+
+/* ============================================
+   RESPONSIVIDADE COMPLETA
+   Define 5 breakpoints principais
+   ============================================ */
+
+/* 1. Smartphones pequenos (até 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+  header h1 {
+    font-size: var(--font-size-lg);
+  }
+  section {
+    padding: var(--spacing-4) 0;
+  }
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 2. Smartphones médios (até 600px) */
+@media (max-width: 600px) {
+  #formulario-cadastro .form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #formulario-cadastro button {
+    width: 100%;
+  }
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* 3. Tablets (até 768px) */
+@media (max-width: 768px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header nav {
+    padding: var(--spacing-2);
+  }
+  main {
+    padding: var(--spacing-3);
+  }
+}
+
+/* 4. Notebooks pequenos (até 992px) */
+@media (max-width: 992px) {
+  .container {
+    padding: 0 var(--spacing-3);
+  }
+  #hero p {
+    font-size: var(--font-size-lg);
+  }
+  footer section {
+    text-align: center;
+  }
+}
